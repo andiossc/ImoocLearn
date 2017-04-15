@@ -54,19 +54,19 @@
     <script type="text/javascript">
         window.onload = function () {
             var Lis = document.getElementsByTagName("li");
+            //鼠标经过时的效果
             for (var i = 0; i < Lis.length; i++) {
-                //鼠标经过时的效果
                 Lis[i].onmouseover = function () {
                     var u = this.getElementsByTagName("ul")[0];
                     if (u != undefined) {
+                        u.style.display = "block";
                         ChangeH(u.id, 1);
                     }
-
-                    Lis[i].onmouseleave = function () {
-                        var u = this.getElementsByTagName("ul")[0];
-                        if (u != undefined) {
-                            ChangeH(u.id, -1);
-                        }
+                }
+                Lis[i].onmouseleave = function () {
+                    var u = this.getElementsByTagName("ul")[0];
+                    if (u != undefined) {
+                        ChangeH(u.id, -1);
                     }
                 }
             }
